@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
@@ -15,7 +15,7 @@ class Todo(db.Model):
 
     def __repr__(self):
         return '<Task %r>' % self.id
-    
+
 @app.route("/")
 def hello():
     return render_template("index.html")
