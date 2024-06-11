@@ -20,5 +20,5 @@ class Loginform(FlaskForm):
                         validators=[DataRequired(), Email()])
     password= PasswordField('password',
                             validators=[DataRequired()])
-    remember = BooleanField('Remember Me')
+    remember = BooleanField('Remember Me') #make users loged in without entering their passwords again
     submit = SubmitField('Login')
