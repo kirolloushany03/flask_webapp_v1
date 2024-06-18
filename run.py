@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/home/kk/desktop_testing/flask_webapp_v1/flask_env/bin/python3
 from flaskblog import app
 
 
