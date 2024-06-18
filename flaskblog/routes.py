@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-from models import User, Post
+from flask import render_template, url_for, flash, redirect
+from flaskblog import app
+from flaskblog.forms import RegistrationForm, Loginform
+from flaskblog.models import User, Post
 
 
 
@@ -18,8 +21,7 @@ posts =[
         "date" : "april 21, 2024"
     }
 ]
-with app.app_context():
-    db.create_all()
+
 
 @app.route("/")
 @app.route("/home")
