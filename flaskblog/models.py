@@ -4,6 +4,9 @@ from flask_login import UserMixin
 
 #decorated function for reloding the user from the user ID stored in the session
 #and this from the documentaion for the extetention to work
+# this extention will expect the user a certain attributes and methods
+# 1) authenticated which will return true if provided a valid credentials
+# 2) is active  ,is anonymos , get id  so we can inhert from class and this will put attributes
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
